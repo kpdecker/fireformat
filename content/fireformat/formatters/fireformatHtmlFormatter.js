@@ -76,7 +76,7 @@ FBL.ns(function() { with (FBL) {
   var DOMFormatter = function(ownerDocument, writer, prefCache) {
     this.writer = writer;
     this.prefCache = prefCache;
-    this.isXML = !!ownerDocument.xmlVersion;
+    this.isXML = ownerDocument.createElement("foo").tagName !== "FOO";
   };
   DOMFormatter.prototype = {
     printNode: function(node) {
@@ -109,16 +109,9 @@ FBL.ns(function() { with (FBL) {
     },
     
     printDocument: function(doc) {
-      if (doc.xmlVersion) {
+      if (this.isXML) {
         this.writer.write({ value: "<?xml" });
-        this.writer.write({ prefix: this.prefCache.getPref("xmlDocType.separatorBeforeVersion"), value: "version=\"" + doc.xmlVersion + "\"" });
-        if (doc.xmlEncoding) {
-          this.writer.write({ prefix: this.prefCache.getPref("xmlDocType.separatorBeforeEncoding"), value: "encoding=\"" + doc.xmlEncoding + "\"" });
-        }
-        this.writer.write({
-          prefix: this.prefCache.getPref("xmlDocType.separatorBeforeStandalone"),
-          value: "standalone=\"" + (doc.xmlStandalone ? "yes" : "no") + "\""
-        });
+        this.writer.write({ prefix: this.prefCache.getPref("xmlDocType.separatorBeforeVersion"), value: "version=\"1.0\"" });
         this.writer.write({ prefix: this.prefCache.getPref("xmlDocType.separatorBeforeClose"), value: "?>\n" });
       }
 

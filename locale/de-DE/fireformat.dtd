@@ -53,8 +53,6 @@
 <!ENTITY fireformat.htmlFormatter.xmlDocOptions "XHTML">
 <!ENTITY fireformat.htmlFormatter.xmlDocTypeOptions "XML-Dokumententyp">
 <!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeVersion "Trennung vor Versionsangaben">
-<!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeEncoding "Trennung vor Kodierungsangaben">
-<!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeStandalone "Trennung vor Standalone-Angaben">
 <!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeClose "Trennung vor Schließanweisungen">
 <!ENTITY fireformat.htmlFormatter.piOptions "Verarbeitungsanweisung">
 <!ENTITY fireformat.htmlFormatter.pi.beforeData "Trennung vor Daten">

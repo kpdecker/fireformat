@@ -25,8 +25,6 @@
         <preference id="pref_html_tabSize" type="int" name="extensions.firebug.fireformatHtmlFormatter.tabSize" />
 
         <preference id="pref_html_xmlDocType_beforeVersion" type="string" name="extensions.firebug.fireformatHtmlFormatter.xmlDocType.separatorBeforeVersion" />
-        <preference id="pref_html_xmlDocType_beforeEncoding" type="string" name="extensions.firebug.fireformatHtmlFormatter.xmlDocType.separatorBeforeEncoding" />
-        <preference id="pref_html_xmlDocType_beforeStandalone" type="string" name="extensions.firebug.fireformatHtmlFormatter.xmlDocType.separatorBeforeStandalone" />
         <preference id="pref_html_xmlDocType_beforeClose" type="string" name="extensions.firebug.fireformatHtmlFormatter.xmlDocType.separatorBeforeClose" />
 
         <preference id="pref_html_docType_beforeName" type="string" name="extensions.firebug.fireformatHtmlFormatter.docType.separatorBeforeName" />
@@ -184,14 +182,6 @@
                       <row align="center">
                         <label control="ffmt_html_xmlDocType_beforeVersion" value="&fireformat.htmlFormatter.xmlDocType.separatorBeforeVersion;" />
                         <separatorSelector type="whitespace" allowBlank="false" id="ffmt_html_xmlDocType_beforeVersion" preference="pref_html_xmlDocType_beforeVersion" />
-                      </row>
-                      <row align="center">
-                        <label control="ffmt_html_xmlDocType_beforeEncoding" value="&fireformat.htmlFormatter.xmlDocType.separatorBeforeEncoding;" />
-                        <separatorSelector type="whitespace" allowBlank="false" id="ffmt_html_xmlDocType_beforeEncoding" preference="pref_html_xmlDocType_beforeEncoding" />
-                      </row>
-                      <row align="center">
-                        <label control="ffmt_html_xmlDocType_beforeStandalone" value="&fireformat.htmlFormatter.xmlDocType.separatorBeforeStandalone;" />
-                        <separatorSelector type="whitespace" allowBlank="false" id="ffmt_html_xmlDocType_beforeStandalone" preference="pref_html_xmlDocType_beforeStandalone" />
                       </row>
                       <row align="center">
                         <label control="ffmt_html_xmlDocType_beforeClose" value="&fireformat.htmlFormatter.xmlDocType.separatorBeforeClose;" />

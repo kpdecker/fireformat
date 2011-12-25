@@ -65,8 +65,6 @@
 
 <!ENTITY fireformat.htmlFormatter.xmlDocTypeOptions "XML Doc Type">
 <!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeVersion "Separator Before Version">
-<!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeEncoding "Separator Before Encoding">
-<!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeStandalone "Separator Before Standalone">
 <!ENTITY fireformat.htmlFormatter.xmlDocType.separatorBeforeClose "Separator Before Close">
 
 <!ENTITY fireformat.htmlFormatter.piOptions "Processing Instruction">

@@ -9,7 +9,7 @@ function runTest() {
 
     var doc = win.document;
     var expected =
-      "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n"
+      "<?xml version=\"1.0\" ?>\n"
       + "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\" [\n"
       + "  <!ENTITY foo \"food\">\n"
       + "  <!ENTITY bar \"bar\">\n"
