@@ -8,6 +8,8 @@
 ]>
 
 <prefwindow id="fireformatOptions" title="&fireformat.Options;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <stringbundleset id="stringbundleset" />
+
   <script src="chrome://fireformat/content/options.js" type="application/x-javascript"/>
 
   <prefpane id="ffmt_formatters" label="&fireformat.Formatters;" onpaneload="FireformatOptions.loadFormatters()">

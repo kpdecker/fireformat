@@ -1,8 +1,5 @@
 /* See license.txt for terms of usage */
 FBL.ns(function() { with (FBL) {
-  var i18n = document.getElementById("strings_fireformat");
-
-
   const ENTITY_LUT = {
     "\u0022": "&quot;", "\u0026": "&amp;", "\u0027": "&apos;", "\u003C": "&lt;",
     "\u003E": "&gt;", "\u00A0": "&nbsp;", "\u00A1": "&iexcl;", "\u00A2": "&cent;",
@@ -278,7 +275,7 @@ FBL.ns(function() { with (FBL) {
   Fireformat.registerFormatter({
     type: "HTML",
     name: "com.incaseofstairs.fireformatHTMLFormatter",
-    display: i18n.getString("FireformatHTMLFormatter"),
+    display: "FireformatHTMLFormatter",
     format: function(object, prefs) {
       var prefCache = prefs || new Fireformat.PrefCache("extensions.firebug.fireformatHtmlFormatter"),
           writer = new Fireformat.Writer(prefCache);  

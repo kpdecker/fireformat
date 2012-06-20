@@ -14,12 +14,20 @@ FireformatOptions.loadFormatters = function() {
   var prefPane = document.getElementById("ffmt_formatters"),
       htmlPopup = getPopup("ffmt_combo_html"),
       cssPopup = getPopup("ffmt_combo_css"),
-      formatters =  Fireformat.Formatters.getFormatters();
+      formatters =  Fireformat.Formatters.getFormatters(),
+      i18n = document.getElementById("strings_fireformat");
 
   for (var i = 0; i < formatters.length; i++) {
     var menuItem = document.createElement("menuitem"),
-        formatter = formatters[i];
-    menuItem.setAttribute("label", formatter.display || formatter.name);
+        formatter = formatters[i],
+        label = formatter.display || formatter.name;
+    try {
+      label = i18n.getString(label);
+    } catch (err) {
+      /* NOP */
+    }
+
+    menuItem.setAttribute("label", label);
     menuItem.setAttribute("value", formatter.name);
     (formatter.type == "HTML" ? htmlPopup : cssPopup).appendChild(menuItem);
   }

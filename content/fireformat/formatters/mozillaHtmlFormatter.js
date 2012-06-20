@@ -5,12 +5,10 @@ FBL.ns(function() {
   const nsIDocumentEncoder = Ci.nsIDocumentEncoder;
   const EncoderService = Cc["@mozilla.org/layout/documentEncoder;1?type=text/html"];
 
-  var i18n = document.getElementById("strings_fireformat");
-
   Fireformat.registerFormatter({
     type: "HTML",
     name: "com.incaseofstairs.mozillaHTMLFormatter",
-    display: i18n.getString("MozillaHTMLFormatter"),
+    display: "MozillaHTMLFormatter",
     format: function(object) {
       // The Document encoder handles all of the heavy lifting here: encoding and line break conversion
       var serializer = EncoderService.createInstance(nsIDocumentEncoder);

@@ -1,7 +1,5 @@
 /* See license.txt for terms of usage */
 FBL.ns(function() {
-  var i18n = document.getElementById("strings_fireformat");
-
   function createIterStatus(collection, index, parent) {
     return {
         parent: parent,
@@ -225,7 +223,7 @@ FBL.ns(function() {
   Fireformat.registerFormatter({
     type: "CSS",
     name: "com.incaseofstairs.fireformatCSSFormatter",
-    display: i18n.getString("FireformatCSSFormatter"),
+    display: "FireformatCSSFormatter",
     format: function(object, prefs) {
       var prefCache = prefs || new Fireformat.PrefCache("extensions.firebug.fireformatCssFormatter"),
           writer = new Fireformat.Writer(prefCache);
