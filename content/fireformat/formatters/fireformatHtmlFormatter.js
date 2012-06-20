@@ -1,5 +1,5 @@
 /* See license.txt for terms of usage */
-FBL.ns(function() { with (FBL) {
+(function() {
   const ENTITY_LUT = {
     "\u0022": "&quot;", "\u0026": "&amp;", "\u0027": "&apos;", "\u003C": "&lt;",
     "\u003E": "&gt;", "\u00A0": "&nbsp;", "\u00A1": "&iexcl;", "\u00A2": "&cent;",
@@ -77,7 +77,8 @@ FBL.ns(function() { with (FBL) {
   };
   DOMFormatter.prototype = {
     printNode: function(node) {
-      var type = node.nodeType;
+      var Node = Node,
+          type = node.nodeType;
 
       if (type == Node.ELEMENT_NODE) {
         this.printElement(node);
@@ -283,4 +284,4 @@ FBL.ns(function() { with (FBL) {
       return writer.toString();
     }
   });
-}});
+})();

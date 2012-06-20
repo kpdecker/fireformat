@@ -1,5 +1,5 @@
 /* See license.txt for terms of usage */
-FBL.ns(function() {
+(function() {
   function createIterStatus(collection, index, parent) {
     return {
         parent: parent,
@@ -231,4 +231,4 @@ FBL.ns(function() {
       return writer.toString();
     }
   });
-});
+})();

@@ -1,5 +1,5 @@
 /* See license.txt for terms of usage */
-FBL.ns(function() {
+(function() {
   const Cc = Components.classes;
   const Ci = Components.interfaces;
   const nsIDocumentEncoder = Ci.nsIDocumentEncoder;
@@ -18,4 +18,4 @@ FBL.ns(function() {
       return serializer.encodeToString().replace(/\r\n/mg, '\n');
     }
   });
-});
+})();
