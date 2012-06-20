@@ -18,13 +18,6 @@
       </Description>
     </em:targetApplication>
 
-    <em:updateURL>http://www.incaseofstairs.com/download/fireformat/update.rdf</em:updateURL>
-    <em:updateKey>
-      MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCEMiu08MPm9dIJhnzAorUknwWOR5Tfr6XPY
-      ailAFLICcedVF51ep+8tbt/liQnkRJ6dcJXrZnin/LVo5dCv4Dc0sYhhwADn4R95aMFCHcvcC1
-      dAUimaZ0RakDCTbOOiF5Kvflfe2OUOzEko/PYv8IcgrcmMZFx5NCQjQv+FsrhwIDAQAB
-    </em:updateKey>
-
     <em:name>Fireformat</em:name>
     <em:description>Page source file formatter</em:description>
     <em:creator>Kevin Decker</em:creator>
