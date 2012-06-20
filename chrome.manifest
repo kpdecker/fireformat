@@ -11,5 +11,6 @@ locale  fireformat en-US       locale/en-US/
 locale  fireformat pt-BR       locale/pt-BR/
 
 overlay chrome://firebug/content/firebugOverlay.xul           chrome://fireformat/content/fireformat.xul
+overlay chrome://fireformat/content/options.xul               chrome://fireformat/content/fireformat.xul
 overlay chrome://fireformat/content/options.xul               chrome://fireformat/content/formatters/fireformatHtmlFormatter.xul
 overlay chrome://fireformat/content/options.xul               chrome://fireformat/content/formatters/fireformatCssFormatter.xul

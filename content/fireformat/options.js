@@ -1,7 +1,4 @@
 /* See license.txt for terms of usage */
-var Fireformat = {};
-Components.utils.import("resource://fireformat/formatters.jsm", Fireformat);
-
 var FireformatOptions = {};
 FireformatOptions.loadFormatters = function() {
   function getPopup(listId) {
