@@ -1,13 +1,111 @@
 /* See license.txt for terms of usage */
-var Fireformat = FBL.ns(function() {
-  var Format = {};
-  Components.utils.import("resource://fireformat/formatters.jsm", Format);
+var Fireformat = new (function() {
+  const Cc = Components.classes;
+  const Ci = Components.interfaces;
+
+  const nsIPrefBranch2 = Ci.nsIPrefBranch2;
+  const PrefService = Cc["@mozilla.org/preferences-service;1"];
+  const prefs = PrefService.getService(nsIPrefBranch2);
+
+  /**
+   * Base interface that all formatters must implement. This may be duck typed.
+   */
+  this.FormatterBase = {
+    /**
+     * Internal name of the formatter. This must be unique for each formatter
+     */
+    name: "",
+  
+    /**
+     * Display name of the formatter. The formatter extension should perform the
+     * necessary i18n for this value.
+     */
+    display: "",
+  
+    /**
+     * Type of object this formatter supports. May be "CSS" or "HTML".
+     */
+    type: "",
+  
+    /**
+     * Formats the given object.
+     * 
+     * @return {String} serialized form of object
+     */
+    format: function(object) {}
+  };
+
+  /**
+   * Formatter registry.
+   */
+  var formatters = [];
+  var Formatters = this.Formatters = {
+    /**
+     * Registers a formatter in the extension listing.
+     */
+    registerFormatter: function(formatter) {
+      // Do not allow dupes for a given formatter
+      if (this.getFormatter(formatter)) {
+        return;
+      }
+
+      formatters.push(formatter);
+    },
+  
+    /**
+     * Removes a currently registered formatter
+     */
+    unregisterFormatter: function(formatter) {
+      for (var i = 0; i < formatters.length; i++) {
+        if (formatters[i].name == name) {
+          formatters.splice(i, 1);
+          return;
+        }
+      }
+    },
+  
+    /**
+     * Retrives the formatter with the given name.
+     */
+    getFormatter: function(name) {
+      for (var i = 0; i < formatters.length; i++) {
+        if (formatters[i].name == name) {
+          return formatters[i];
+        }
+      }
+    },
+
+    /**
+     * Retrieves the currently selected CSS formatter.
+     * 
+     * This is defined by the "extensions.firebug.fireformat.cssFormatter" preference.
+     */
+    getCSSFormatter: function() {
+      return this.getFormatter(prefs.getCharPref("extensions.firebug.fireformat.cssFormatter"));
+    },
+
+    /**
+     * Retrieves the currently selected HTML formatter.
+     * 
+     * This is defined by the "extensions.firebug.fireformat.htmlFormatter" preference.
+     */
+    getHTMLFormatter: function() {
+      return this.getFormatter(prefs.getCharPref("extensions.firebug.fireformat.htmlFormatter"));
+    },
+
+    /**
+     * Retrieves all registered formatters.
+     */
+    getFormatters: function() {
+      return formatters.slice();
+    }
+  };
 
   /**
    * Convenience wrapper around the formatters js module registration method.
    */
   this.registerFormatter = function(formatter) {
-    return Format.Formatters.registerFormatter(formatter);
+    return Formatters.registerFormatter(formatter);
   };
 
   /**
@@ -238,4 +336,4 @@ var Fireformat = FBL.ns(function() {
       this.setIndent(this.indent - (offset !== undefined ? offset : 1));
     }
   };
-});
+})();

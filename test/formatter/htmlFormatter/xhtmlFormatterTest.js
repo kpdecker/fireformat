@@ -4,8 +4,7 @@ function runTest() {
       FBTrace = FBTest.FirebugWindow.FBTrace;
   
   FBTestFirebug.openNewTab(urlBase + "formatter/htmlFormatter/xhtml_index.xhtml", function(win) {
-    var Format = {};
-    Components.utils.import("resource://fireformat/formatters.jsm", Format);
+    var Format = Format = FW.Fireformat;
 
     var doc = win.document;
     var expected =

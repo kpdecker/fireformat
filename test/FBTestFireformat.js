@@ -1,8 +1,6 @@
 /* See license.txt for terms of usage */
-var Format = {};
-Components.utils.import("resource://fireformat/formatters.jsm", Format);
-
-var Firebug = FW.Firebug;
+var Firebug = FW.Firebug,
+    Format = FW.Fireformat;
 
 var FBTestFireformat = {
     PrefHandler: function(prefs) {
