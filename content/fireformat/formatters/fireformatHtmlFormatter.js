@@ -77,8 +77,7 @@
   };
   DOMFormatter.prototype = {
     printNode: function(node) {
-      var Node = Node,
-          type = node.nodeType;
+      var type = node.nodeType;
 
       if (type == Node.ELEMENT_NODE) {
         this.printElement(node);
