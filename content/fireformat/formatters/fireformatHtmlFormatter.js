@@ -234,7 +234,7 @@
           this.printNode(childNodes[i]);
         }
 
-        if (childNodes.length || !FBL.selfClosingTags[tagName.toLowerCase()]) {
+        if (childNodes.length || (window.FBL && !window.FBL.selfClosingTags[tagName.toLowerCase()])) {
           this.writer.write({ value: "</" + tagName + ">", nowrap: true });
         }
       } else {
